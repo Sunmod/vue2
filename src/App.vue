@@ -4,6 +4,9 @@
     {{form.text}}
     <button @click="getLowerText">Call method</button>
     {{textLower}}
+    <br>
+    <hr>
+    {{toLower}}
   </div>
 </template>
 
@@ -20,6 +23,11 @@ export default {
       textLower: ''
     }
   },
+  computed: {
+    toLower () {
+      return this.form.text.toLowerCase()
+    }
+  },
   methods: {
     getText () {
       // alert('Hello' + this.text)
@@ -28,6 +36,6 @@ export default {
     getLowerText () {
       this.textLower = this.form.text.toLowerCase()
     }
-  }
+  },
 }
 </script>
