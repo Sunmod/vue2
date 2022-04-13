@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <button @click="getText">Call method</button>
+    <input v-model="form.text" type="text">
+    {{form.text}}
+    <button @click="getLowerText">Call method</button>
   </div>
 </template>
 
@@ -10,13 +12,19 @@ export default {
   name: 'App',
   data() {
     return {
-      text: ' some text'
+      text: ' some text',
+      form: {
+        text: ''
+      }
     }
   },
   methods: {
     getText () {
       // alert('Hello' + this.text)
       alert(`Hello ${this.text}`)
+    },
+    getLowerText () {
+      this.form.text = this.form.text.toLowerCase()
     }
   }
 }
