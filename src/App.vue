@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-
+    <button @click="getText">Call method</button>
   </div>
 </template>
 
@@ -8,5 +8,10 @@
 
 export default {
   name: 'App',
+  methods: {
+    getText () {
+      alert('Hello')
+    }
+  }
 }
 </script>
