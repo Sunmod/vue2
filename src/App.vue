@@ -15,7 +15,8 @@ export default {
   },
   methods: {
     getText () {
-      alert('Hello' + this.text)
+      // alert('Hello' + this.text)
+      alert(`Hello ${this.text}`)
     }
   }
 }
