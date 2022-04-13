@@ -8,9 +8,14 @@
 
 export default {
   name: 'App',
+  data() {
+    return {
+      text: ' some text'
+    }
+  },
   methods: {
     getText () {
-      alert('Hello')
+      alert('Hello' + this.text)
     }
   }
 }
