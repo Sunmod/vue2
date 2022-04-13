@@ -4,8 +4,6 @@
     {{form.text}}
     <button @click="getLowerText">Call method</button>
     {{textLower}}
-    <br>
-    <hr>
     {{toLower}}
   </div>
 </template>
@@ -30,7 +28,6 @@ export default {
   },
   methods: {
     getText () {
-      // alert('Hello' + this.text)
       alert(`Hello ${this.text}`)
     },
     getLowerText () {
